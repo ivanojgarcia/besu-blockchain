@@ -1,0 +1,29 @@
+data-path="/usr/app/data"
+
+bootnodes=[
+    "enode://438601a0fc61bdf5d745af5473fc1857d1e9bfef5f32e88033fef552f2aa8ae01e9e375d1fa031685a5e4e84d85a93e967e2c9ff73d990fc543434313ac7b675@172.16.239.11:30303",
+    "enode://9462dec9fd31f7aeb74c58b49dc1173c464dc539e2c54fed81b55a39444814deb74ad7d602898d627889743217413f0de23e02f36e2a72b9e4f4e21f40a02ee1@172.16.239.13:30305",
+    "enode://28210e05ad0527682cea67481a03a0f361ecf34427308cc141c8f89ec24fe471860b6b82559aad93f347c3ae11cc6c5f17ad39033c3f148ec4f7530c6f19e2e0@172.16.239.14:30306"
+]
+
+rpc-http-enabled=true
+rpc-http-api=["ETH","NET","WEB3","IBFT"]
+
+rpc-http-cors-origins=["all"]
+
+host-allowlist=["*"]
+
+p2p-port=30304
+
+rpc-ws-enabled=true
+rpc-ws-port=8889
+
+metrics-port=9546
+
+genesis-file="/usr/app/genesis.json"
+
+metrics-enabled=true
+
+node-private-key-file="/usr/app/data/key"
+
+p2p-host="172.16.239.12"

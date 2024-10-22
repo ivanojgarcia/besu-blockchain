@@ -1,0 +1,36 @@
+{
+  "genesis": {
+    "config": {
+      "chainId": 15,
+      "muirglacierblock": 0,
+      "ibft2": {
+        "blockperiodseconds": 2,
+        "epochlength": 30000,
+        "requesttimeoutseconds": 4
+      }
+    },
+    "nonce": "0x0",
+    "timestamp": "0x0",
+    "gasLimit": "0x1fffffffffffff",
+    "difficulty": "0x1",
+    "mixHash": "0x63746963616c20626c6f636b20686561646572",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "alloc": {
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+        "balance": "1000000000000000000000000"
+      },
+      "0x742d35cc6634c0532925a3b844bc454e4438f44e": {
+        "balance": "1000000000000000000000000"
+      },
+      "0xfe9e8709d3215310075d67e3ed32a380ccf451c8": {
+        "balance": "1000000000000000000000000"
+      }
+    }
+  },
+  "blockchain": {
+    "nodes": {
+      "generate": true,
+      "count": 3
+    }
+  }
+}

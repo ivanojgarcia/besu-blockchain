@@ -1,0 +1,26 @@
+services:
+  node:
+    image: hyperledger/besu:latest
+    container_name: "node-1"
+    volumes:
+      - ./data:/usr/app/data
+      - ./config.toml:/usr/app/config.toml
+      - ./genesis.json:/usr/app/genesis.json
+    command: --config-file=/usr/app/config.toml
+    ports:
+      - "8545:8545"   # RPC HTTP
+      - "8546:8546"   # RPC WebSocket
+      - "30303:30303" # P2P
+      - "9545:9545"   # Métricas
+      - "8888:8888"   # RPC WebSocket (puerto personalizado)
+    networks:
+      besu-net:
+        ipv4_address: 172.16.239.11
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+networks:
+  besu-net:
+    external: true

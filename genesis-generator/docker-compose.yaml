@@ -1,0 +1,19 @@
+services:
+  reltime_node:
+    image: hyperledger/besu:latest
+    container_name: "genesis-generator"
+    volumes:
+      - .:/usr/app/
+    command: > 
+      operator generate-blockchain-config 
+      --config-file=/usr/app/ibftConfigFile.json 
+      --to=/usr/app/networkFiles 
+      --private-key-file-name=key
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    labels:
+      - "project=besu-network"
+      - "service=genesis-generator"
